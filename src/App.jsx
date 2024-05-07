@@ -11,8 +11,8 @@ function App() {
   return (
     <>
     <h1>Material UI</h1>
-    <Button variant="contained" onClick={handleClick} startIcon={<DeleteIcon />}>Delete</Button>
-    <Button variant="contained" onClick={handleClick}  color="success"  >Click Me 2</Button>
+    <Button variant="contained" onClick={handleClick} size="medium" startIcon={<DeleteIcon />}>Delete</Button>
+    <Button variant="contained" onClick={handleClick} size="medium" color="success"  >Click Me 2</Button>
     
     </>
   )
