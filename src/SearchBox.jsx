@@ -12,16 +12,12 @@ export default function SearchBox(){
     setCity(e.target.value);
   }
 
-  let handleSubmit = (e)=>{
-e.preventDefault();
-console.log(city);
-setCity("")
-  }
+
 
   return(
     <div className='searchBox'>
       <h3>search weather</h3>
-      <form onSubmit={handleSubmit}>
+      <form>
       <TextField className="text" id="city" label="city Name" variant="outlined" required value={city}
       onChange={handleChange} />
       <br />
