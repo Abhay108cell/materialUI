@@ -1,11 +1,32 @@
 import TextField from '@mui/material/TextField';
-
+import Button from '@mui/material/Button';
+import './searchBox.css'
+import { useState } from 'react';
 export default function SearchBox(){
+
+
+  let [city, setCity] = useState("")
+ 
+
+  let handleChange = (e) =>{
+    setCity(e.target.value);
+  }
+
+  let handleSubmit = (e)=>{
+e.preventDefault();
+console.log(city);
+setCity("")
+  }
+
   return(
-    <div>
+    <div className='searchBox'>
       <h3>search weather</h3>
-      <form>
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+      <form onSubmit={handleSubmit}>
+      <TextField className="text" id="city" label="city Name" variant="outlined" required value={city}
+      onChange={handleChange} />
+      <br />
+      <br />
+      <Button variant="contained" type='submit'>Search</Button>
       </form>
     </div>
   )
