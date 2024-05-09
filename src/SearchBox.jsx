@@ -8,7 +8,10 @@ const API_URL = "https://api.openweathermap.org/data/2.5/weather?";
 const API_KEY = "33e9fd0eae31269d009ffe0568ac847d"
 
 let getWheatherInfo = async ()=>{
- await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`)
+ let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`)
+ let data = await response.json()
+ console.log(data)
+
 }
 
  
