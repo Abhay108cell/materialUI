@@ -11,7 +11,6 @@ let getWheatherInfo = async ()=>{
  let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}`)
  let data = await response.json()
  console.log(data)
-
 }
 
  
@@ -24,6 +23,7 @@ let getWheatherInfo = async ()=>{
     e.preventDefault();
     console.log(city);
     setCity("")
+    getWheatherInfo("")
       }
 
   return(
