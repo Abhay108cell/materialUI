@@ -2,6 +2,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './searchBox.css'
 import { useState } from 'react';
+import InfoBox from './InfoBox';
 export default function SearchBox(){
   let [city, setCity] = useState("")
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
@@ -46,6 +47,9 @@ let getWheatherInfo = async ()=>{
       <br />
       <Button variant="contained" type='submit'>Search</Button>
       </form>
+
+         <InfoBox/>
+
     </div>
   )
 }
