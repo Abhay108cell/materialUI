@@ -11,7 +11,17 @@ let getWheatherInfo = async ()=>{
  let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`)
  let data = await response.json()
  console.log(data)
+ let result = {
+   temp: data.main.temp,
+   tempMin : data.main.temp_min,
+   tempMax : data.main.temp_max,
+   humidity:data.main.humidity,
+   feelsLike: data.main.feels_like, 
+   weather: data.weather[0].description,
+ }
+ console.log(result);
 }
+
 
  
 
