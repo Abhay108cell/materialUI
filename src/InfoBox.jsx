@@ -6,6 +6,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 export default function InforBox(){
+
+      const INit_URL = "https://unsplash.com/photos/a-desert-scene-with-a-few-buildings-in-the-distance-U8iSiJrkbhQ"
+
   let Info = {
     temp: 25.05,
     tempMin : 25.05,
@@ -20,7 +23,7 @@ export default function InforBox(){
       <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image={INit_URL}
         title="green iguana"
       />
       <CardContent>
