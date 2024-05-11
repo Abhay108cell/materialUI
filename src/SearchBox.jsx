@@ -2,7 +2,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './searchBox.css'
 import { useState } from 'react';
-import InfoBox from './InfoBox';
+// import InfoBox from './InfoBox';
 export default function SearchBox(){
   let [city, setCity] = useState("")
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
@@ -40,7 +40,7 @@ let getWheatherInfo = async ()=>{
 
   return(
     <div className='searchBox'>
-      <h3>search weather</h3>
+      {/* <h3>search weather</h3> */}
       <form onSubmit={handleSubmit}>
       <TextField className="text" id="city" label="city Name" variant="outlined" required value={city}
       onChange={handleChange} />
@@ -49,7 +49,7 @@ let getWheatherInfo = async ()=>{
       <Button variant="contained" type='submit'>Search</Button>
       </form>
 
-         <InfoBox/>
+         {/* <InfoBox/> */}
 
     </div>
   )

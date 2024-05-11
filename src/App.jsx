@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import SearchBox from './SearchBox'
+// import SearchBox from './SearchBox'
+import WeatherApp from './WeatherApp'
 import './App.css'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <>
-  <SearchBox/>
+  {/* <SearchBox/> */}
+  <WeatherApp/>
     </>
   )
 }
