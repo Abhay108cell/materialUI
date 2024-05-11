@@ -2,6 +2,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import './InfoBox.css'
 
 export default function InforBox(){
 
@@ -29,7 +30,7 @@ export default function InforBox(){
         <Typography gutterBottom variant="h5" component="div">
          {Info.city}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" component={"span"}>
          <div>Temprature = {Info.temp}&deg;C</div>
          <div>Humidity = {Info.humidity}</div>
          <div>Min. Temprature = {Info.tempMin}&deg;C</div>
