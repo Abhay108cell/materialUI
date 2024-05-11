@@ -13,6 +13,7 @@ let getWheatherInfo = async ()=>{
  let data = await response.json()
  console.log(data)
  let result = {
+  city: city,
    temp: data.main.temp,
    tempMin : data.main.temp_min,
    tempMax : data.main.temp_max,

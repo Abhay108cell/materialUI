@@ -7,9 +7,10 @@ import Typography from '@mui/material/Typography';
 
 export default function InforBox(){
 
-      const INit_URL = "https://unsplash.com/photos/a-desert-scene-with-a-few-buildings-in-the-distance-U8iSiJrkbhQ"
+      const INit_URL = "https://plus.unsplash.com/premium_photo-1714923303591-3b262dd1864f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHVzdHklMjB3ZWF0aGVyfGVufDB8fDB8fHww"
 
   let Info = {
+    city: "Meerut",
     temp: 25.05,
     tempMin : 25.05,
     tempMax : 25.05,
@@ -28,7 +29,7 @@ export default function InforBox(){
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+         {Info.city}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
