@@ -5,25 +5,35 @@ import { useState } from 'react';
 // import InfoBox from './InfoBox';
 export default function SearchBox({updateInfo}){
   let [city, setCity] = useState("")
+  let [error, seterror] = useState("")
+
+
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 const API_KEY = "33e9fd0eae31269d009ffe0568ac847d"
 
 let getWheatherInfo = async ()=>{
- let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`)
- let data = await response.json()
- console.log(data)
- let result = {
-  city: city,
-   temp: data.main.temp,
-   tempMin : data.main.temp_min,
-   tempMax : data.main.temp_max,
-   humidity:data.main.humidity,
-   feelsLike: data.main.feels_like, 
-   weather: data.weather[0].description,
- }
- console.log(result);
- return result
-}
+
+  try{
+    let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`)
+    let data = await response.json()
+    console.log(data)
+    let result = {
+     city: city,
+      temp: data.main.temp,
+      tempMin : data.main.temp_min,
+      tempMax : data.main.temp_max,
+      humidity:data.main.humidity,
+      feelsLike: data.main.feels_like, 
+      weather: data.weather[0].description,
+    }
+    console.log(result);
+    return result
+  }catch(err){
+    seterror("no such place")
+    }
+
+ 
+} 
 
 
  
