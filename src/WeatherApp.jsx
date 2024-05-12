@@ -16,7 +16,7 @@ export default function WeatherApp(){
       <h2>Weather App by Me</h2>
       <SearchBox/>
       <br />
-      <InfoBox info={weatherInfo}/>
+      <InfoBox Info={weatherInfo}/>
       </div>
   )
 }
