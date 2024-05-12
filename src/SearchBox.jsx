@@ -32,11 +32,12 @@ let getWheatherInfo = async ()=>{
     setCity(e.target.value);
   }
 
-  let handleSubmit = (e)=>{
+  let handleSubmit =  async(e)=>{
     e.preventDefault();
     console.log(city);
     setCity("")
-    getWheatherInfo()
+   let info = await getWheatherInfo()
+   updateInfo(info)
       }
 
   return(
