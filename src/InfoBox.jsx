@@ -10,7 +10,7 @@ export default function InfoBox({Info}){
 
       const HOT_URL = "https://images.unsplash.com/photo-1577985759186-0854dfd3f218?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90JTIwd2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D"
       const COLD_URL = "https://images.unsplash.com/photo-1425100599170-85ec4f00a6ee?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q09MRCUyMHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D"
-      const RAINY_URL = ""
+      const RAINY_URL = "https://images.unsplash.com/photo-1536329978773-2f8ac431f330?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmFpbnklMjB3ZWF0aGVyfGVufDB8fDB8fHww"
   
   return(
     <div className="InfoBox">
@@ -18,7 +18,7 @@ export default function InfoBox({Info}){
       <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={INit_URL}
+        image={Info.humidity > 80 ? RAINY_URL : Info.temp>15 ? HOT_URL: COLD_URL}
         title="green iguana"
       />
       <CardContent>
