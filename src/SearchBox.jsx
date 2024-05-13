@@ -5,7 +5,7 @@ import { useState } from 'react';
 // import InfoBox from './InfoBox';
 export default function SearchBox({updateInfo}){
   let [city, setCity] = useState("")
-  let [error, seterror] = useState("")
+  let [error, seterror] = useState(false)
 
 
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
@@ -29,27 +29,23 @@ let getWheatherInfo = async ()=>{
     console.log(result);
     return result
   }catch(err){
-    seterror("no such place")
+    throw err;
     }
-
- 
 } 
-
-
- 
-
   let handleChange = (e) =>{
     setCity(e.target.value);
   }
-
   let handleSubmit =  async(e)=>{
-    e.preventDefault();
-    console.log(city);
-    setCity("")
-   let info = await getWheatherInfo()
-   updateInfo(info)
+    try{
+      e.preventDefault();
+      console.log(city);
+      setCity("")
+     let info = await getWheatherInfo()
+     updateInfo(info)
+    } catch(err){
+      seterror(true)
+    }
       }
-
   return(
     <div className='searchBox'>
       {/* <h3>search weather</h3> */}
