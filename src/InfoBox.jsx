@@ -8,6 +8,9 @@ export default function InfoBox({Info}){
 
       const INit_URL = "https://plus.unsplash.com/premium_photo-1714923303591-3b262dd1864f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZHVzdHklMjB3ZWF0aGVyfGVufDB8fDB8fHww"
 
+      const HOT_URL = "https://images.unsplash.com/photo-1577985759186-0854dfd3f218?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90JTIwd2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D"
+      const COLD_URL = "https://images.unsplash.com/photo-1425100599170-85ec4f00a6ee?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q09MRCUyMHdlYXRoZXJ8ZW58MHx8MHx8fDA%3D"
+      const RAINY_URL = ""
   
   return(
     <div className="InfoBox">
