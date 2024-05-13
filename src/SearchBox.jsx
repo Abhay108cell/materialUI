@@ -55,6 +55,7 @@ let getWheatherInfo = async ()=>{
       <br />
       <br />
       <Button variant="contained" type='submit'>Search</Button>
+      {error && <p>No Such Place Exists!</p>}
       </form>
 
          {/* <InfoBox/> */}
